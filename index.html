@@ -80,25 +80,24 @@
                     if(num==$(".box a").length){
                         num=$(".box a").length-1;
                     }
+                    $(".box").css({
+                        marginLeft:-num*width,
+                        transition:"margin 1s ease"
+                    })
                 }else if(e.direction=="right"){
                     num--;
-                    if(num==-1){
+                    if(num<0){
                         num=0;
                     }
+                    $(".box").css({
+                        marginLeft:num*width,
+                        transition:"margin 1s ease"
+                    })
                 }
-                $(".box").css({
-                    marginLeft:-num*width,
-                    transition:"margin 1s ease"
-                })
-            }else{
-                $(".box").css({
-                    marginLeft:num*width,
-                    transition:"margin 1s ease"
-                })
+
             }
         })
     })
 
-</script>
 </script>
 </html>
